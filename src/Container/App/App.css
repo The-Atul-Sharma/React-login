@@ -1,0 +1,112 @@
+/** Common css **/
+
+.auto {
+    margin: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.mt5 {
+    margin-top: 5% !important;
+}
+
+.ml5 {
+    margin-left: 5% !important;
+}
+
+.mr5 {
+    margin-right: 5% !important;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/** Auth components css **/
+
+.gradient-background {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.auth-asi-logo {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 60%;
+    left: 0;
+}
+
+.middle-screen-card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 45vh;
+    margin: auto;
+    padding-bottom: 1%;
+    color: #2e3d49 !important;
+}
+
+.auth-link-size {
+    font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    .middle-screen-card {
+        height: 30vh;
+    }
+    .auth-asi-logo {
+        bottom: 40%;
+    }
+}

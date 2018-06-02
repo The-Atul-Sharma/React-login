@@ -15,25 +15,31 @@ export const mailFolderListItems = (
             <ListItemIcon>
                 <InboxIcon />
             </ListItemIcon>
-            <ListItemText primary="Inbox" />
+            <ListItemText primary="Authentication" />
         </ListItem>
         <ListItem button>
             <ListItemIcon>
                 <StarIcon />
             </ListItemIcon>
-            <ListItemText primary="Starred" />
+            <ListItemText primary="Project" />
         </ListItem>
         <ListItem button>
             <ListItemIcon>
                 <SendIcon />
             </ListItemIcon>
-            <ListItemText primary="Send mail" />
+            <ListItemText primary="Variant" />
         </ListItem>
         <ListItem button>
             <ListItemIcon>
                 <DraftsIcon />
             </ListItemIcon>
-            <ListItemText primary="Drafts" />
+            <ListItemText primary="Protocol" />
+        </ListItem>
+        <ListItem button>
+            <ListItemIcon>
+                <DraftsIcon />
+            </ListItemIcon>
+            <ListItemText primary="Template" />
         </ListItem>
     </div>
 );
