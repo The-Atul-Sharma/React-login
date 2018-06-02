@@ -24,6 +24,14 @@
     text-decoration: underline;
 }
 
+.underline-none {
+    text-decoration: none;
+}
+
+a {
+    color: #2e3d49 !important;
+}
+
 /** Auth components css **/
 
 .gradient-background {
