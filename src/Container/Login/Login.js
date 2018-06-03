@@ -9,6 +9,9 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
+import { connect } from 'react-redux';
+import { login } from '../../Actions/Auth/AuthActions';
+
 import './Login.css';
 import asiDataLabLogo from '../../Static/Images/Main/NegivateASILogo.png';
 
@@ -41,8 +44,10 @@ class Login extends React.Component {
     };
 
     handleSubmit = event => {
-        alert('LOG IN');
         event.preventDefault();
+        this.props.login(this.state).then(res => {
+            this.props.history.push('/');
+        });
     };
 
     render() {
@@ -144,4 +149,7 @@ Login.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Login);
+export default connect(
+    null,
+    { login }
+)(withStyles(styles)(Login));

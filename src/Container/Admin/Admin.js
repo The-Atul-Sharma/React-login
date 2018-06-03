@@ -33,4 +33,6 @@ class Admin extends Component {
     }
 }
 
+const mapStateToProps = state => state.user;
+
 export default Admin;
