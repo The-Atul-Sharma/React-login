@@ -11,6 +11,7 @@ import { mailFolderListItems } from './AdminSideBarOptions';
 import { drawerWidth } from '../../Constants/Styles';
 import './Sidebar.css';
 
+// Classes of Sidebar component
 const styles = theme => ({
     drawerPaper: {
         position: 'relative',
@@ -53,6 +54,7 @@ class Sidebar extends Component {
     };
 
     render() {
+        // CSS classes of component
         const { classes, theme } = this.props;
         return (
             <div>

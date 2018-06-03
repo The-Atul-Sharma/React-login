@@ -4,12 +4,14 @@ import Toolbar from '@material-ui/core/Toolbar';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import './Navbar.css';
 import asiDataLabLogo from '../../Static/Images/Main/NegivateASILogo.png';
 import { drawerWidth } from '../../Constants/Styles';
 
+// Classes of Navbar component
 const styles = theme => ({
     appBar: {
         zIndex: theme.zIndex.drawer + 1,
@@ -42,6 +44,7 @@ class Navbar extends Component {
     };
 
     render() {
+        // CSS classes of component
         const { classes } = this.props;
         return (
             <div>
@@ -66,6 +69,7 @@ class Navbar extends Component {
                             <MenuIcon />
                         </IconButton>
                         <img src={asiDataLabLogo} alt="Asi Datalab" />
+                        <Button color="inherit">{this.props.user.user}</Button>
                     </Toolbar>
                 </AppBar>
             </div>

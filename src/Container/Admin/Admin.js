@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
 import Sidebar from '../../Components/Sidebar/Sidebar';
-
+import { connect } from 'react-redux';
 class Admin extends Component {
     state = {
         open: false,
     };
 
-    //Open drawer
+    // Open drawer
     handleDrawerOpen = () => {
         this.setState({ open: true });
     };
 
-    //Close drawer
+    // Close drawer
     handleDrawerClose = () => {
         this.setState({ open: false });
     };
@@ -22,6 +22,7 @@ class Admin extends Component {
             <div>
                 <Navbar
                     open={this.state.open}
+                    user={this.props.user}
                     handleDrawerOpen={this.handleDrawerOpen}
                 />
                 <Sidebar
@@ -33,6 +34,11 @@ class Admin extends Component {
     }
 }
 
-const mapStateToProps = state => state.user;
+const mapStateToProps = state => {
+    return { user: state.user };
+};
 
-export default Admin;
+export default connect(
+    mapStateToProps,
+    null
+)(Admin);

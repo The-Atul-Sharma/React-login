@@ -10,11 +10,13 @@ import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 import App from './Container/App/App';
 
+// Create redux store and apply middleware
 const store = createStore(
     rootReducers,
     composeWithDevTools(applyMiddleware(ReduxThunk))
 );
 
+// Render application
 ReactDOM.render(
     <Provider store={store}>
         <App />

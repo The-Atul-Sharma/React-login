@@ -12,9 +12,9 @@ import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
 import { login } from '../../Actions/Auth/AuthActions';
 
-import './Login.css';
 import asiDataLabLogo from '../../Static/Images/Main/NegivateASILogo.png';
 
+// Classes of Login component
 const styles = theme => ({
     card: {
         maxWidth: '30rem',
@@ -29,20 +29,31 @@ class Login extends React.Component {
         this.state = {
             email: '',
             password: '',
-            visible: false,
         };
     }
 
+    /** 
+        @description Validation of login form
+        @returns boolean
+    **/
     validateForm() {
         return this.state.email.length > 0 && this.state.password.length > 0;
     }
 
+    /** 
+        @description Update input
+        @param {object} event
+    **/
     handleChange = event => {
         this.setState({
             [event.target.name]: event.target.value,
         });
     };
 
+    /** 
+        @description Call login handler and redirect to home page
+        @param {object} event
+    **/
     handleSubmit = event => {
         event.preventDefault();
         this.props.login(this.state).then(res => {
@@ -51,6 +62,7 @@ class Login extends React.Component {
     };
 
     render() {
+        // CSS classes of component
         const { classes } = this.props;
 
         return (

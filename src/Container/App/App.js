@@ -5,6 +5,7 @@ import Login from '../../Container/Login/Login';
 import './App.css';
 
 const App = () => (
+    // Application routing
     <Router>
         <div>
             <Switch>
