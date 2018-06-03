@@ -27,7 +27,7 @@ class Login extends React.Component {
         super(props);
 
         this.state = {
-            email: '',
+            username: '',
             password: '',
         };
     }
@@ -37,7 +37,7 @@ class Login extends React.Component {
         @returns boolean
     **/
     validateForm() {
-        return this.state.email.length > 0 && this.state.password.length > 0;
+        return this.state.username.length > 0 && this.state.password.length > 0;
     }
 
     /** 
@@ -89,8 +89,8 @@ class Login extends React.Component {
 
                         <div className={classNames('ml5', 'mr5')}>
                             <TextField
-                                label="Email"
-                                name="email"
+                                label="Email/Username"
+                                name="username"
                                 required
                                 className={classes.textField}
                                 margin="normal"

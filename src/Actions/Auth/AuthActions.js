@@ -1,5 +1,5 @@
 import { USER_LOGGED_IN } from '../../Constants/Type';
-import api from '../../API/Auth/Auth';
+import api from '../../Services/Auth/Auth';
 
 export function userLoggedIn(user) {
     return {
