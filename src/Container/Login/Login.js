@@ -12,8 +12,6 @@ import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
 import { login } from '../../Actions/Auth/AuthActions';
 
-import asiDataLabLogo from '../../Static/Images/Main/NegivateASILogo.png';
-
 // Classes of Login component
 const styles = theme => ({
     card: {
@@ -68,11 +66,6 @@ class Login extends React.Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <div className="gradient-background">
-                    <img
-                        className="auth-asi-logo"
-                        src={asiDataLabLogo}
-                        alt="Asi Datalab"
-                    />
                     <Card
                         className={classNames(
                             classes.card,
@@ -124,7 +117,7 @@ class Login extends React.Component {
                             <Grid item xs={4} />
                             <Grid item xs={4}>
                                 <Button
-                                    title="Try ASI Datalab"
+                                    title="Try Website"
                                     variant="raised"
                                     color="primary"
                                     disabled={!this.validateForm()}
