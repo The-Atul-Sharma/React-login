@@ -8,7 +8,6 @@ import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import './Navbar.css';
-// import asiDataLabLogo from '../../Static/Images/Main/NegivateASILogo.png';
 import { drawerWidth } from '../../Constants/Styles';
 
 // Classes of Navbar component
@@ -68,7 +67,6 @@ class Navbar extends Component {
                         >
                             <MenuIcon />
                         </IconButton>
-//                         <img src={asiDataLabLogo} alt="Asi Datalab" />
                         <Button color="inherit">{this.props.user.user}</Button>
                     </Toolbar>
                 </AppBar>
